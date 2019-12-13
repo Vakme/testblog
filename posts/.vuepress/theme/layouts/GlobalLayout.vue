@@ -1,13 +1,18 @@
 <template>
     <div id="global-layout">
-        <header><h1>Header</h1></header>
+        <TopHeader></TopHeader>
+        <TheHeader></TheHeader>
         <component :is="layout"/>
-        <footer><h1>Footer</h1></footer>
+        <TheFooter></TheFooter>
     </div>
 </template>
 
 <script>
+  import TheHeader from "../global-components/TheHeader";
+  import TopHeader from "../global-components/TopHeader";
+  import TheFooter from "../global-components/TheFooter";
   export default {
+    components: {TheHeader, TheFooter, TopHeader},
     computed: {
       layout () {
         if (this.$page.path) {
@@ -21,3 +26,7 @@
     }
   }
 </script>
+
+<style>
+    @import "../styles/index.css";
+</style>
