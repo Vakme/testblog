@@ -9,8 +9,6 @@
     "markdown-it-footnote": "^3.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
     "vuepress": "^1.2.0"
   },
   "scripts": {
