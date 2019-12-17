@@ -19,10 +19,10 @@ jobs:
       - run: yarn build 
       - run: 
           name: Install gh-pages
-          command: npm install -g --silent gh-pages
+          command: npm install gh-pages
       - run:
           name: Configure git userdata
           command: git config user.email "ci-build@basement-code.pl" && git config user.name "ci-build"
       - run:
           name: Deploy to gh-pages
-          command:  gh-pages --dist posts/.vuepress/dist
+          command: chmod +x node_modules/gh-pages/bin/gh-pages.js && $_ --dist posts/.vuepress/dist
