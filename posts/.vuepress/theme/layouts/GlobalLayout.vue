@@ -8,18 +8,22 @@
 </template>
 
 <script>
+  import GlobalLayout from '@app/components/GlobalLayout.vue'
   import TheHeader from "../global-components/TheHeader";
   import TopHeader from "../global-components/TopHeader";
   import TheFooter from "../global-components/TheFooter";
   export default {
-    components: {TheHeader, TheFooter, TopHeader},
+      components: {
+        DefaultGlobalLayout: GlobalLayout,
+        TheHeader, TheFooter, TopHeader
+      },
     computed: {
-      layout () {
+      layout() {
         if (this.$page.path) {
           if (this.$frontmatter.layout) {
             return this.$frontmatter.layout
           }
-          return 'Layout'
+          return 'DefaultGlobalLayout'
         }
         return 'NotFound'
       }

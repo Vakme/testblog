@@ -17,6 +17,9 @@
           facebook: '#',
           instagram: '#',
           twitter: "#"
+        },
+        mounted() {
+          console.log(this.$site)
         }
       };
     }

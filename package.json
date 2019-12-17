@@ -9,6 +9,7 @@
     "markdown-it-footnote": "^3.0.2"
   },
   "devDependencies": {
+    "@vuepress/plugin-blog": "^1.5.2",
     "vuepress": "^1.2.0"
   },
   "scripts": {
