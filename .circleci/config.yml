@@ -20,6 +20,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn build 
+      - run:
+          name: Disable Jekyll filename interpreter
+          command: touch posts/.vuepress/dist/.nojekyll
       - run: 
           name: Install gh-pages
           command: npm install gh-pages
@@ -28,4 +31,4 @@ jobs:
           command: git config user.email "ci-build@basement-code.pl" && git config user.name "ci-build"
       - run:
           name: Deploy to gh-pages
-          command: chmod +x node_modules/gh-pages/bin/gh-pages.js && $_ --dist posts/.vuepress/dist
+          command: chmod +x node_modules/gh-pages/bin/gh-pages.js && $_ --dotfiles --message "[skip ci] Updates" --dist posts/.vuepress/dist
