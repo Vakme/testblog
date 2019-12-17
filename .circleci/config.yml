@@ -17,3 +17,12 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn build 
+      - run: 
+          name: Install gh-pages
+          command: yarn add global gh-pages 
+      - run:
+          name: Configure git userdata
+          command: git config user.email "ci-build@basement-code.pl" && git config user.name "ci-build"
+      - run:
+          name: Deploy to gh-pages
+          command:  gh-pages --dist posts/.vuepress/dist
