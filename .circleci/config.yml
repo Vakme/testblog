@@ -19,7 +19,7 @@ jobs:
       - run: yarn build 
       - run: 
           name: Install gh-pages
-          command: yarn add global gh-pages 
+          command: npm install -g --silent gh-pages
       - run:
           name: Configure git userdata
           command: git config user.email "ci-build@basement-code.pl" && git config user.name "ci-build"
