@@ -24,7 +24,7 @@
     props: ['item'],
     data() {
       return {
-        hover: true
+        hover: false
       }
     },
     methods: {
