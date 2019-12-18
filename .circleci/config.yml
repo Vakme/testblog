@@ -30,9 +30,9 @@ jobs:
       - run:
           name: Install sharp-cli
           command: npm install sharp-cli
-      - run: 
-          name: Check sharp-cli existence
-          command: chmod +x node_modules/sharp-cli/bin/sharp-cli.js && $_ --help
+#       - run: 
+#           name: Check sharp-cli existence
+#           command: chmod +x node_modules/sharp-cli/bin/sharp-cli.js && $_ --help
       - run:
           name: Configure git userdata
           command: git config user.email "ci-build@basement-code.pl" && git config user.name "ci-build"
