@@ -1,2 +1,13 @@
 @import "normalize.css";
 @import "skeleton.css";
+
+html, body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.wide-container {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}

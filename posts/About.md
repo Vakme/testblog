@@ -1,7 +1,0 @@
----
-layout: Page
----
-
-# Nanana
-
-WERBEFIbrvoi

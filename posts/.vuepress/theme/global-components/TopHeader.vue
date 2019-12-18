@@ -1,7 +1,12 @@
 <template>
     <div id="TopHeader" class="u-full-width top-header">
         <div class="wide-container">
-            <div class="date">{{date}}</div>
+            <div class="header-right">
+                {{date}}
+                <span class="links">
+                    <router-link class="page-link" :to="page.path" v-for="page in filteredPages">{{ page.title }}</router-link>
+                </span>
+            </div>
             <div class="social-icons"><a :href="socials[key]" v-for="key in Object.keys(socials)" class="social-icon"><i :class="`fab fa-${key}`"></i></a></div>
         </div>
     </div>
@@ -17,27 +22,34 @@
           facebook: '#',
           instagram: '#',
           twitter: "#"
-        },
-        mounted() {
-          console.log(this.$site)
         }
       };
+    },
+    computed: {
+      filteredPages: function() {
+        return this.$site.pages.filter(page => page.pid === 'page');
+      }
     }
   }
 </script>
 
 <style scoped>
 .top-header {
-    background-color: #9fccfb;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    font-size: 0.8em;
 }
-    .wide-container {
-        width: 90vw;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
+    .links {
+        margin-left: 20px;
+    }
+    .page-link {
+        margin: 0 5px;
+        color: white;
+        text-decoration: none;
     }
     .social-icon {
         margin: 0 5px;
-        color: black;
+        color: white;
     }
 </style>
