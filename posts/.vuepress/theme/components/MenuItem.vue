@@ -1,20 +1,20 @@
 <template>
-    <div class="menu-item-container"
-         @mouseover="hover = true"
-         @mouseleave="hover = false">
-    <div class="menu-item">
-        <span>
-            <router-link :to="item.path" class="menu-item-key">{{ item.key }}</router-link>
-        </span>
-    </div>
-        <div v-if="hover" class="menu-item-dropdown">
-            <router-link v-for="page in item.pages" :to="page.path" class="menu-item-dropdown-item uk-column-1-3">
+    <div class="menu-item-container">
+        <div class="menu-item">
+            <span>
+                <router-link :to="item.path" class="menu-item-key">{{ item.key }}</router-link>
+            </span>
+        </div>
+        <div class="uk-width-auto@m" uk-drop>
+            <div class=" uk-drop-grid uk-child-width-1-3@m menu-item-dropdown" uk-grid>
+            <router-link v-for="page in item.pages" :to="page.path" class="menu-item-dropdown-item menu-item-link">
                     <span v-if="page.frontmatter.image">
                         <img :src="$withBase('/' + page.frontmatter.image)" :alt="page.title" class="menu-item-dropdown-image">
                     </span>
                     <span class="menu-item-dropdown-key">{{page.title}}</span>
                     <span class="menu-item-dropdown-date">{{calculateDate(page.path)}}</span>
             </router-link>
+            </div>
         </div>
     </div>
 </template>
@@ -48,13 +48,14 @@
         text-decoration: none;
         color: black;
     }
+    .menu-drop {
+        width: 750px;
+    }
     .menu-item-dropdown {
-        position: absolute;
-        left: 10vw;
         background-color: white;
-        display: flex;
         border-top: 3px solid black;
         border-bottom: 1px solid black;
+        max-width: 80vw;
     }
 
     .menu-item-dropdown-item {
@@ -62,6 +63,9 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    .menu-item-link {
         text-decoration: none;
         color: black;
     }
@@ -87,6 +91,18 @@
         background-color: #e1e1e1;
         font-size: 0.8em;
         padding: 2px 5px;
+    }
+
+    @media (max-width: 960px) {
+        .menu-item-dropdown {
+            position: fixed;
+            left: 10vw;
+        }
+
+        .menu-item-dropdown-date {
+            position: relative;
+            bottom: 12px;
+        }
     }
 
 </style>

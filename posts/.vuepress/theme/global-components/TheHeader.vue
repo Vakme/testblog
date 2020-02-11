@@ -1,7 +1,5 @@
 <template>
     <div id="Header">
-        <Responsive :breakpoints="breakpoints">
-        <div slot-scope="el" class="big-header" v-if="el.is.big">
         <div id="TopHeader" class="u-full-width top-header">
             <div class="wide-container">
                 <div class="header-right">
@@ -14,7 +12,7 @@
             </div>
         </div>
         <header class="wide-container">
-            <img :src="$withBase('/web-logo-small.png')" alt="logo">
+            <img class="uk-logo" :src="$withBase('/web-logo-small.png')" alt="logo">
         </header>
         <nav class="main-menu">
             <MenuItem v-for="category in $category._metaMap"
@@ -22,9 +20,7 @@
             ></MenuItem>
         </nav>
     </div>
-        <div slot-scope="el" class="small-header" v-else>SMOL</div>
-        </Responsive>
-    </div>
+    <!--TODO: use uikit drop component-->
 </template>
 
 <script>

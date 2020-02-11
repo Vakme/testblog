@@ -1,6 +1,7 @@
 <template>
-
     <div>
+        <Slider></Slider>
+        <Masonry></Masonry>
         <ul id="default-layout">
             <li v-for="page in $pagination.pages">
                 <router-link class="page-link" :to="page.path">{{ page.title }}</router-link>
@@ -12,3 +13,19 @@
         </div>
     </div>
 </template>
+
+
+<script>
+  import Slider from '../components/Slider'
+  import Masonry from '../components/Masonry'
+
+  export default {
+    components: {
+      Slider,
+      Masonry
+    },
+  }
+</script>
+
+<style lang="scss" scoped>
+</style>
