@@ -1,6 +1,5 @@
 <template>
     <div id="global-layout">
-        <TopHeader></TopHeader>
         <TheHeader></TheHeader>
         <component :is="layout"/>
         <TheFooter></TheFooter>
@@ -10,12 +9,11 @@
 <script>
   import GlobalLayout from '@app/components/GlobalLayout.vue'
   import TheHeader from "../global-components/TheHeader";
-  import TopHeader from "../global-components/TopHeader";
   import TheFooter from "../global-components/TheFooter";
   export default {
       components: {
         DefaultGlobalLayout: GlobalLayout,
-        TheHeader, TheFooter, TopHeader
+        TheHeader, TheFooter
       },
     computed: {
       layout() {
@@ -27,10 +25,16 @@
         }
         return 'NotFound'
       }
+    },
+    beforeMount () {
+      const UIkit = require('uikit');
+      const Icons = require('uikit/dist/js/uikit-icons');
+      UIkit.use(Icons);
+      window.UIkit = UIkit
     }
   }
 </script>
 
-<style>
-    @import "../styles/index.css";
+<style lang="scss">
+    @import "../styles/index";
 </style>

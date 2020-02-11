@@ -1,20 +1,21 @@
 <template>
-    <div    class="menu-item"
-            @mouseover="hover = true"
-            @mouseleave="hover = false"
-    >
+    <div class="menu-item-container"
+         @mouseover="hover = true"
+         @mouseleave="hover = false">
+    <div class="menu-item">
         <span>
             <router-link :to="item.path" class="menu-item-key">{{ item.key }}</router-link>
         </span>
+    </div>
         <div v-if="hover" class="menu-item-dropdown">
-            <span v-for="page in item.pages" class="menu-item-dropdown-item">
-                <span v-if="page.frontmatter.image">
-                    <img :src="$withBase('/' + page.frontmatter.image)" :alt="page.title" class="menu-item-dropdown-image">
-                </span>
-                <span class="menu-item-dropdown-key">{{page.title}}</span>
-                <span class="menu-item-dropdown-date">{{calculateDate(page.path)}}</span>
-            </span>
-         </div>
+            <router-link v-for="page in item.pages" :to="page.path" class="menu-item-dropdown-item uk-column-1-3">
+                    <span v-if="page.frontmatter.image">
+                        <img :src="$withBase('/' + page.frontmatter.image)" :alt="page.title" class="menu-item-dropdown-image">
+                    </span>
+                    <span class="menu-item-dropdown-key">{{page.title}}</span>
+                    <span class="menu-item-dropdown-date">{{calculateDate(page.path)}}</span>
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -49,7 +50,7 @@
     }
     .menu-item-dropdown {
         position: absolute;
-        top: 35px;
+        left: 10vw;
         background-color: white;
         display: flex;
         border-top: 3px solid black;
@@ -61,10 +62,13 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        text-decoration: none;
+        color: black;
     }
 
-    .menu-item-dropdown-image {
+    img.menu-item-dropdown-image {
         height: 100px;
+        max-width: none;
         width: auto;
     }
     .menu-item-dropdown-key {

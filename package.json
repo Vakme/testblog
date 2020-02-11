@@ -6,10 +6,14 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "markdown-it": "^10.0.0",
-    "markdown-it-footnote": "^3.0.2"
+    "markdown-it-footnote": "^3.0.2",
+    "uikit": "^3.2.6",
+    "vue-responsive-components": "^0.2.3"
   },
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.5.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
     "vuepress": "^1.2.0"
   },
   "scripts": {
