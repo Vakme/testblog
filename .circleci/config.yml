@@ -19,16 +19,23 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+  
       - run: yarn build 
       - run:
           name: Disable Jekyll filename interpreter
           command: touch posts/.vuepress/dist/.nojekyll
       - run: 
-          name: Install gh-_pages
-          command: npm install gh-_pages
+          name: Install gh-pages
+          command: npm install gh-pages
+      - run:
+          name: Install sharp-cli
+          command: npm install sharp-cli
+#       - run: 
+#           name: Check sharp-cli existence
+#           command: chmod +x node_modules/sharp-cli/bin/sharp-cli.js && $_ --help
       - run:
           name: Configure git userdata
           command: git config user.email "ci-build@basement-code.pl" && git config user.name "ci-build"
       - run:
-          name: Deploy to gh-_pages
-          command: chmod +x node_modules/gh-_pages/bin/gh-_pages.js && $_ --dotfiles --message "[skip ci] Updates" --dist posts/.vuepress/dist
+          name: Deploy to gh-pages
+          command: chmod +x node_modules/gh-pages/bin/gh-pages.js && $_ --dotfiles --message "[skip ci] Updates" --dist posts/.vuepress/dist
