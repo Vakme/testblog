@@ -20,7 +20,6 @@
             ></MenuItem>
         </nav>
     </div>
-    <!--TODO: use uikit drop component-->
 </template>
 
 <script>
