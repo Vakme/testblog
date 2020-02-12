@@ -12,7 +12,7 @@
             </div>
         </div>
         <header class="wide-container">
-            <img class="uk-logo" :src="$withBase('/web-logo-small.png')" alt="logo">
+            <router-link to="/" exact><img class="uk-logo" :src="$withBase('/web-logo-small.png')" alt="logo"></router-link>
         </header>
         <nav class="main-menu">
             <MenuItem v-for="category in $category._metaMap"

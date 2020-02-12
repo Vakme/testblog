@@ -15,8 +15,6 @@
                 {{calculateDate(item.path)}}
             </div>
 
-
-
         </div>
     </li>
 </template>

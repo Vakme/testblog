@@ -23,7 +23,7 @@ module.exports = {
             dirname: '_posts',
             path: '/',
             pagination: {
-              lengthPerPage: 2
+              lengthPerPage: 6
             }
           },
           {

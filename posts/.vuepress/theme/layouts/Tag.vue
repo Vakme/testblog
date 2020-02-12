@@ -1,20 +1,20 @@
 <template>
     <div>
-    <ul id="default-layout">
-        <li v-for="page in $pagination._matchedPages">
-            <router-link class="page-link" :to="page.path">{{ page.title }}</router-link>
-        </li>
-    </ul>
-    <div id="pagination">
-        <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
-        <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
-    </div>
+        <Masonry :posts="$pagination._matchedPages"></Masonry>
+        <pagination :pagination="$pagination"></pagination>
     </div>
 </template>
 
 <script>
+  import Masonry from '../components/Masonry'
+  import Pagination from '../components/Pagination'
+
   export default {
-    name: "Tag"
+    name: "Tag",
+    components: {
+      Masonry,
+      Pagination
+    },
   }
 </script>
 
