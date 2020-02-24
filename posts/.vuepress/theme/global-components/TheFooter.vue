@@ -37,7 +37,7 @@
             opacity: 0.16;
             background-position: center center;
             background-size: cover;
-            background-image: url("/background.jpg");
+            background-image: url("/testblog/background.jpg");
             z-index: 1;
          }
     }
