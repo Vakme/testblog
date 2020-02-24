@@ -1,6 +1,7 @@
 @import "~uikit/src/scss/variables-theme.scss";
 @import "~uikit/src/scss/mixins-theme.scss";
 @import "~uikit/src/scss/uikit-theme.scss";
+@import "~prismjs/themes/prism-tomorrow.css";
 
 html, body {
     font-family: 'Work Sans', sans-serif;
@@ -18,3 +19,48 @@ html, body {
     margin: 50px 10vw;
 }
 
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
+
+.theme-container {
+    @extend .wide;
+    ul, ol {
+        @extend .uk-list;
+        @extend .uk-list-bullet;
+    }
+
+    table {
+        @extend .uk-table;
+        @extend .uk-table-divider;
+    }
+
+    a {
+        @extend .uk-link-reset;
+        border-bottom: 3px #81ac87 solid;
+        &:hover {
+            color: #81ac87;
+        }
+    }
+
+    img {
+        max-width: 80vw;
+        display: block;
+        margin: auto;
+    }
+}
