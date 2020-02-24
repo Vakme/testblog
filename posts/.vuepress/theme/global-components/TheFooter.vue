@@ -42,7 +42,7 @@
          }
     }
     .footer-container {
-        padding: 50px 10vw;
+        padding: 50px 9vw;
         color: white;
         z-index: 100;
         position: absolute;
