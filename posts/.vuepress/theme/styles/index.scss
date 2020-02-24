@@ -39,7 +39,9 @@ blockquote p {
 }
 
 .theme-container {
-    @extend .wide;
+    width: 70vw;
+    margin: 50px 15vw;
+
     ul, ol {
         @extend .uk-list;
         @extend .uk-list-bullet;
