@@ -1,7 +1,7 @@
 <template>
     <div>
         <Slider></Slider>
-        <Masonry :posts="$pagination.pages"></Masonry>
+        <Masonry :posts="$pagination.pages" :index="$pagination.paginationIndex"></Masonry>
         <pagination :pagination="$pagination"></pagination>
         <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" :data-src="$withBase('/about.jpg')" uk-parallax="bgy: -300" uk-img>
             <div class="back"></div>
