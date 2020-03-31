@@ -38,7 +38,7 @@ module.exports = {
             id: 'author',
             dirname: '_authors',
             itemLayout: 'Page',
-            itemPermalink: '/:slug'
+            itemPermalink: '/author/:slug'
           },
         ],
         frontmatters: [
