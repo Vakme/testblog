@@ -1,6 +1,8 @@
 ---
 image: undraw_hacker_mindset_gjwq.svg
 
+author: John
+
 tag:
   - vue
   - vuepress

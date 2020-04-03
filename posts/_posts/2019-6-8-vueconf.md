@@ -1,6 +1,8 @@
 ---
 image: undraw_annotation_7das.svg
 
+author: John
+
 tag:
   - vue 
   - vueconf

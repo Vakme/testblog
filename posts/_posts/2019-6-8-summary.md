@@ -1,6 +1,8 @@
 ---
 image: undraw_shared_workspace_hwky.svg
 
+author: John
+
 tag:
   - vue 
   - summary
