@@ -1,6 +1,5 @@
 <template>
-
-    <article class="uk-comment wide">
+    <article v-if="author" class="uk-comment wide">
         <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
             <div class="uk-width-auto">
                 <img class="uk-comment-avatar" :src="$withBase('/' + author.frontmatter.image)" :alt="author.frontmatter.id" width="80" height="80">
