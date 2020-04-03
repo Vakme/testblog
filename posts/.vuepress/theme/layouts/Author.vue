@@ -12,7 +12,7 @@
   import AuthorBox from "../components/AuthorBox";
 
   export default {
-    name: "Tag",
+    name: "Auhor",
     components: {
         AuthorBox,
       Masonry,
@@ -26,10 +26,3 @@
       }
   }
 </script>
-
-<style lang="scss">
-    .author-image {
-        max-height: 100px;
-        max-width: 100px;
-    }
-</style>
