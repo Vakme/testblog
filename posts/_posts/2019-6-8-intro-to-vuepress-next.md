@@ -6,6 +6,10 @@ description: Testing markdown
 
 author: John
 
+autometa:
+  author:
+    name: John
+    
 tag:
   - vue
   - vuepress

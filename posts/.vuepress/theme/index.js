@@ -73,5 +73,15 @@ module.exports = {
           isPlain: false,
           noGlobalSocialShare: true
         },
+      'autometa': {
+          enable : true, // enables/disables everything - control per page using frontmatter
+          image  : true, // regular meta image used by search engines
+          twitter: true, // twitter card
+          og     : true, // open graph: facebook, pinterest, google+
+          schema : true, // schema.org for google
+
+          canonical_base: '/testblog/',
+
+      }
   }
 }
