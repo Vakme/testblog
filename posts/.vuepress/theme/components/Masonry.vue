@@ -2,7 +2,7 @@
     <div class="wide uk-grid-medium uk-child-width-1-3@m" uk-grid="masonry: true">
         <span v-for="item of posts">
             <div class="uk-card uk-card-default">
-                <img :src="$withBase(item.frontmatter.image)" :alt="item.title">
+                <img v-if="!!item.frontmatter.image" :src="$withBase(item.frontmatter.image)" :alt="item.title">
                 <div class="post-card">
                     <router-link v-for="cat in item.frontmatter.category" :to="`/category/${cat}`">
                         <span class="uk-label">{{cat.toLocaleUpperCase()}}</span>
