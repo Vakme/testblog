@@ -2,7 +2,7 @@
     <div class="wide">
         <h2 class="tag-title">{{$page.frontmatter.title}}</h2>
         <Masonry :posts="$pagination._matchedPages"></Masonry>
-        <pagination :pagination="$pagination"></pagination>
+        <Pagination :pagination="$pagination"></Pagination>
     </div>
 </template>
 

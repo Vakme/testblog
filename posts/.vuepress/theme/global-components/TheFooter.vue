@@ -12,14 +12,19 @@
                 </span>
             </div>
             <hr class="uk-divider-icon divider">
-            <div class="uk-flex uk-flex-center uk-flex-middle uk-text-small">© Basement Code, 2019. Wszelkie prawa zastrzeżone</div>
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-text-small">© Basement Code, {{year}}. Wszelkie prawa zastrzeżone</div>
         </div>
     </footer>
 </template>
 
 <script>
   export default {
-    name: "TheFooter"
+    name: "TheFooter",
+      computed: {
+        year: function () {
+            return new Date().getFullYear();
+        }
+      }
   }
 </script>
 
@@ -42,7 +47,7 @@
          }
     }
     .footer-container {
-        padding: 50px 9vw;
+        padding: 50px 9vw 0 9vw;
         color: white;
         z-index: 100;
         position: absolute;
