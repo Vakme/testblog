@@ -6,6 +6,12 @@ description: Testing markdown
 
 author: John
 
+meta: 
+ - name: description
+   content: Testing markdown
+ - property: og:image
+   content: /testblog/undraw_hacker_mindset_gjwq.svg
+
 tag:
   - vue
   - vuepress

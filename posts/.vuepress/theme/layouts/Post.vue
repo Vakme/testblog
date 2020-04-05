@@ -3,6 +3,8 @@
         <!-- TODO: slot for header + post meta -->
         <header class="theme-container">
             <h1>{{$page.title}}</h1>
+            {{$page.frontmatter.meta}}
+            {{$page.path}}
             <hr class="uk-divider-small">
             <div class="uk-text-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
                 <li>{{$page.readingTime.text}}</li>

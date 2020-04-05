@@ -72,10 +72,10 @@ module.exports = {
           autoQuote: true,
           isPlain: false,
           noGlobalSocialShare: true
-        },
+        }/*,
       'autometa': {
           canonical_base: '/testblog/',
 
-      }
+      }*/
   }
 }
