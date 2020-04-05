@@ -72,6 +72,19 @@ module.exports = {
           autoQuote: true,
           isPlain: false,
           noGlobalSocialShare: true
-        }
+        },
+      'seo': {
+          siteTitle: (_, $site) => $site.title,
+          title: $page => $page.title,
+          description: $page => $page.frontmatter.description,
+          author: $page => $page.frontmatter.author,
+          tags: $page => $page.frontmatter.tags,
+          twitterCard: _ => 'summary_large_image',
+          type: $page => ['articles', 'posts', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+          url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+          image: ($page, $site) => $page.frontmatter.image && (($site.themeConfig.domain || '') + $page.frontmatter.image),
+          publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+          modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+      }
   }
 }

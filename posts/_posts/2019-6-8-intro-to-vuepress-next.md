@@ -1,16 +1,10 @@
 ---
-image: /undraw_hacker_mindset_gjwq.svg
+image: /test.jpg
 
 title: H1 heading
 description: Testing markdown
 
 author: John
-
-meta: 
- - name: description
-   content: Testing markdown
- - property: og:image
-   content: https://vakme.github.io/testblog/undraw_hacker_mindset_gjwq.svg
 
 tag:
   - vue

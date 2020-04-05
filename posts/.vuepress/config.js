@@ -2,6 +2,10 @@ module.exports = {
   title: 'testblog',
   description: 'Just playing around',
   base: "/testblog/",
+  themeConfig: {
+    domain: 'https://vakme.github.io',
+    base: "/testblog/",
+  },
   markdown: {
     extendMarkdown: md => {
       md.set({ typographer: true });
