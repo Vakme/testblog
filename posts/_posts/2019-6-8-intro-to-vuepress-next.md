@@ -1,6 +1,5 @@
 ---
-image: undraw_hacker_mindset_gjwq.svg
-shareImage: undraw_hacker_mindset_gjwq.svg
+image: /undraw_hacker_mindset_gjwq.svg
 
 title: H1 heading
 description: Testing markdown

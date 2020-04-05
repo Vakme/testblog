@@ -1,6 +1,6 @@
 ---
 title: Intro to Vuepress
-image: undraw_online_ad_mg4t.svg
+image: /undraw_online_ad_mg4t.svg
 
 author: John
 

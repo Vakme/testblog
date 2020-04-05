@@ -1,5 +1,5 @@
 ---
-image: undraw_shared_workspace_hwky.svg
+image: /undraw_shared_workspace_hwky.svg
 
 title: Summary
 author: John

@@ -1,6 +1,6 @@
 <template>
     <li>
-        <img :src="$withBase('/' + item.frontmatter.image)" :alt="item.title"  uk-cover>
+        <img :src="$withBase(item.frontmatter.image)" :alt="item.title"  uk-cover>
         <div class="uk-position-bottom-left uk-position-small">
             <div class="uk-card uk-card-body uk-card-default">
                 <router-link v-for="cat in item.frontmatter.category" :to="`/category/${cat}`">

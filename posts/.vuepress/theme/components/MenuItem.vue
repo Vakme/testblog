@@ -9,7 +9,7 @@
             <div class=" uk-drop-grid uk-child-width-1-3@m menu-item-dropdown" uk-grid>
             <router-link v-for="page in item.pages" :to="page.path" class="menu-item-dropdown-item menu-item-link">
                     <span v-if="page.frontmatter.image">
-                        <img :src="$withBase('/' + page.frontmatter.image)" :alt="page.title" class="menu-item-dropdown-image">
+                        <img :src="$withBase(page.frontmatter.image)" :alt="page.title" class="menu-item-dropdown-image">
                     </span>
                     <span class="menu-item-dropdown-key">{{page.title}}</span>
                     <span class="menu-item-dropdown-date">{{calculateDate(page.path)}}</span>

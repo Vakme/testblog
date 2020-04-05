@@ -1,5 +1,5 @@
 ---
-image: undraw_annotation_7das.svg
+image: /undraw_annotation_7das.svg
 
 title: VueConf
 author: John
