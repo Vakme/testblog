@@ -15,6 +15,7 @@
             <Content/>
         </main>
         <footer class="wide">
+            <social-share :image="$withBase('/' + $page.frontmatter.image)"/>
             <hr class="uk-divider-icon">
             <h3>Author:</h3>
         </footer>

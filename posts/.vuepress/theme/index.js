@@ -69,8 +69,9 @@ module.exports = {
     'social-share':
         {
           networks: ['twitter', 'facebook', 'reddit'],
-            autoQuote: true,
-            isPlain: false,
+          autoQuote: true,
+          isPlain: false,
+          noGlobalSocialShare: true
         },
   }
 }
