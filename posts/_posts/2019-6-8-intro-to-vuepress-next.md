@@ -10,7 +10,7 @@ meta:
  - name: description
    content: Testing markdown
  - property: og:image
-   content: /testblog/undraw_hacker_mindset_gjwq.svg
+   content: https://vakme.github.io/testblog/undraw_hacker_mindset_gjwq.svg
 
 tag:
   - vue
