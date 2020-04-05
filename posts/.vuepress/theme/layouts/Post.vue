@@ -3,7 +3,6 @@
         <!-- TODO: slot for header + post meta -->
         <header class="theme-container">
             <h1>{{$page.title}}</h1>
-            {{$frontmatter}}
             <hr class="uk-divider-small">
             <div class="uk-text-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
                 <li>{{$page.readingTime.text}}</li>
@@ -16,7 +15,7 @@
             <Content/>
         </main>
         <footer class="wide">
-            <social-share :image="$withBase($page.frontmatter.image)"/>
+            <social-share/>
             <hr class="uk-divider-icon">
             <h3>Author:</h3>
         </footer>
