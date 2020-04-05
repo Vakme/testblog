@@ -10,7 +10,6 @@
                 <li>{{date}}</li>
             </div>
             <img :src="$withBase('/' + $page.frontmatter.image)" :alt="$page.title">
-            {{$page.frontmatter}}
         </header>
         <main class="theme-container">
             <Content/>

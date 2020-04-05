@@ -1,6 +1,8 @@
 ---
 image: undraw_hacker_mindset_gjwq.svg
+
 title: H1 heading
+description: Testing markdown
 
 author: John
 
