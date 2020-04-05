@@ -1,5 +1,6 @@
 ---
 image: undraw_hacker_mindset_gjwq.svg
+title: H1 heading
 
 author: John
 
@@ -11,7 +12,6 @@ category:
   - webdevelopment
 ---
 
-# h1 Heading 
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading

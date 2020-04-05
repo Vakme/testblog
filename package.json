@@ -13,11 +13,14 @@
     "vue-responsive-components": "^0.2.3"
   },
   "devDependencies": {
-    "@vuepress/plugin-blog": "^1.5.2",
+    "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-medium-zoom": "^1.3.1",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-reading-progress": "^1.0.9",
+    "vuepress-plugin-reading-time": "^0.1.1",
+    "vuepress-plugin-social-share": "^0.2.1"
   },
   "scripts": {
     "dev": "vuepress dev posts",

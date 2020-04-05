@@ -1,6 +1,7 @@
 ---
 image: undraw_annotation_7das.svg
 
+title: VueConf
 author: John
 
 tag:
@@ -10,9 +11,6 @@ tag:
 category:
   - geeklife
 ---
-
-# VueConf
-
 - VueConf
 - VueConf
 - VueConf

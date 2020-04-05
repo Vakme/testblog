@@ -1,5 +1,6 @@
 ---
 image: undraw_content_structure_79gj.svg
+title: Shanghai
 
 author: Mary
 
@@ -10,8 +11,6 @@ tag:
 category:
   - geeklife
 ---
-
-# Shanghai
 
 - Shanghai
 - Shanghai

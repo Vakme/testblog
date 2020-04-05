@@ -1,6 +1,7 @@
 ---
 image: undraw_shared_workspace_hwky.svg
 
+title: Summary
 author: John
 
 tag:
@@ -11,8 +12,6 @@ category:
   - geeklife
   - webdevelopment
 ---
-
-# Summary
 
 - Summary
 - Summary

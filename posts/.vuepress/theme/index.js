@@ -5,6 +5,9 @@ module.exports = {
     ['link', {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Work+Sans:300,400,700&display=swap&subset=latin-ext'}],
   ],
   plugins: {
+    'reading-progress': {
+      readingDir: 'posts'
+    },
     '@vuepress/blog':
         {
           directories: [
@@ -25,6 +28,8 @@ module.exports = {
             {
               id: 'author_meta',
               dirname: '_authors',
+              itemPermalink: 'author_meta/:slug',
+              itemLayout: 'Page',
             },
 
           ],
@@ -56,6 +61,16 @@ module.exports = {
     '@vuepress/plugin-medium-zoom':
         {
           selector: '.theme-container :not(a) > img',
-        }
+        },
+    'vuepress-plugin-reading-time':
+        {
+          excludes: ['/about', '/tag/.*', '/category/.*', '/author/.*', '/author_meta/.*']
+        },
+    'social-share':
+        {
+          networks: ['twitter', 'facebook', 'reddit'],
+            autoQuote: true,
+            isPlain: false,
+        },
   }
 }
