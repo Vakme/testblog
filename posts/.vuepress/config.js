@@ -4,7 +4,7 @@ module.exports = {
   base: "/testblog/",
   themeConfig: {
     domain: 'https://vakme.github.io',
-    base: "/testblog/",
+    base: "/testblog",
   },
   markdown: {
     extendMarkdown: md => {
