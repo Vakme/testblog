@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wide">
         <AuthorBox :author="author"></AuthorBox>
         <Masonry :posts="$pagination._matchedPages"></Masonry>
         <pagination :pagination="$pagination"></pagination>

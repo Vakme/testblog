@@ -1,5 +1,5 @@
 <template>
-    <div class="wide" uk-slideshow="ratio: 8:3; autoplay: true; autoplay-interval: 5000">
+    <div uk-slideshow="ratio: 8:3; autoplay: true; autoplay-interval: 5000">
         <ul class="uk-slideshow-items">
             <Slide v-for="post in filteredPosts" :item="post"></Slide>
         </ul>

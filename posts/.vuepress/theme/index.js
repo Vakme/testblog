@@ -38,12 +38,14 @@ module.exports = {
               id: "tag",
               keys: ['tag', 'tags'],
               path: '/tag/',
+              title: "tag",
               scopeLayout: 'Tag'
             },
             {
               id: "category",
               keys: ['category', 'categories'],
               path: '/category/',
+              title: "category",
               scopeLayout: 'Tag'
             },
             {
