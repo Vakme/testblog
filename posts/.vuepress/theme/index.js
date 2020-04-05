@@ -80,7 +80,7 @@ module.exports = {
           og     : true, // open graph: facebook, pinterest, google+
           schema : true, // schema.org for google
 
-          canonical_base: 'https://vakme.github.io/testblog/',
+          canonical_base: '/testblog/',
 
       }
   }
