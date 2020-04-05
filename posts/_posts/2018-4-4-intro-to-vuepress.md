@@ -5,10 +5,6 @@ image: /undraw_online_ad_mg4t.svg
 
 author: John
 
-autometa:
-  author:
-    name: John
-
 tag: 
   - vue
   - vuepress
