@@ -8,7 +8,7 @@
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.5",
     "markdown-it-footnote": "^3.0.2",
-    "prismjs": "^1.19.0",
+    "prismjs": "^1.25.0",
     "uikit": "^3.2.6",
     "vue-responsive-components": "^0.2.3",
     "vuepress-plugin-seo": "^0.1.2",
